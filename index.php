@@ -19,8 +19,46 @@
     <title>Password manager</title>
 </head>
 <body>
+<style>
+        #myForm {
+            display: none;
+        }
+    </style>
     <h1>Hello <?php echo $row['name'];?></h1>
 
     <p>Add Password</p>
+    <button id="showFormButton">Add Password</button>
+
+
+    <form action="password_manager/password_submit.php" method="post" id="myForm" onsubmit="submitForm(event)">
+        <label for="name">Title:</label>
+        <input type="text" id="title" name="title" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="pass" name="pass" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const toggleFormButton = document.getElementById('showFormButton');
+        const formContainer = document.getElementById('myForm');
+        const dynamicForm = document.getElementById('dynamicForm');
+
+        toggleFormButton.addEventListener('click', () => {
+            if (formContainer.style.display === 'none' || !formContainer.style.display) {
+                formContainer.style.display = 'block';
+            } else {
+                formContainer.style.display = 'none';
+            }
+        });
+
+        dynamicForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            formContainer.style.display = 'none';
+            dynamicForm.reset();
+        });
+    </script>
+
 </body>
 </html>
