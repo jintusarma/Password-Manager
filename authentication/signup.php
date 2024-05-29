@@ -1,5 +1,5 @@
 <?php
-require 'configuration/config.php';
+require '../configuration/config.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $username = $_POST["username"];
@@ -75,6 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </select>
         <button type="submit">Submit</button>
     </form>
+    <a href="login.php">Login</a>
 </body>
 
 </html>

@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashPassword = $row['password'];
         if (password_verify($pass, $hashPassword)) {
             $_SESSION['login'] = TRUE;
-            $_SESSION['username'] = $usernameOrEmail;
+            $_SESSION['username'] = $row['username'];
             header("Location: ../index.php");
         }
     } else {
@@ -42,5 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p>Password : <input type="password" name="pass"></p>
         <button type="submit">Submit</button>
     </form>
+    <a href="signup.php">Signup</a>
 </body>
 </html>

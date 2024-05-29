@@ -40,6 +40,10 @@
         <button type="submit">Submit</button>
     </form>
 
+    <button><a href="password_manager/password_list.php">Show All Password</a></button>
+
+    <button><a href="authentication/logout.php">Logout</a></button>
+
     <script>
         const toggleFormButton = document.getElementById('showFormButton');
         const formContainer = document.getElementById('myForm');
