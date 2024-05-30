@@ -14,17 +14,17 @@
         $encryptedData = openssl_encrypt($pass, $method, $key, $options,$iv);
 
 
-        // $decryptedData = openssl_decrypt($encryptedData, $method, $key, $options, $iv);
+        $decryptedData = openssl_decrypt($encryptedData, $method, $key, $options, $iv);
 
 
-        // echo $user.$title." ".$encryptedData;
-        // echo "\nDecrypt : ".$decryptedData;
+        echo $user.$title." ".$encryptedData;
+        echo "\nDecrypt : ".$decryptedData;
 
-        $query= "INSERT into password_list(title,password,user) values ('$title','$encryptedData','$user')";
-        $res = mysqli_query($conn,$query);
+        // $query= "INSERT into password_list(title,password,user) values ('$title','$pass','$user')";
+        // $res = mysqli_query($conn,$query);
 
-        if($res){
-            header("Location: ../index.php");
-        }
+        // if($res){
+        //     header("Location: ../index.php");
+        // }
     }
 ?>

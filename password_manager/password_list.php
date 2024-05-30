@@ -26,7 +26,14 @@ if ($_SESSION['login']) {
         ?>
         <tr>
             <td><?php echo $rows['title'] ?></td>
-            <td><?php echo $rows['password'] ?></td>
+            <td>
+                <?php
+
+                    $decryptedData = openssl_decrypt($rows['password'], $method, $key, $options, $iv);
+
+                    echo  $decryptedData;
+                ?>
+            </td>
         </tr>
         <?php } ?>
     </table>
