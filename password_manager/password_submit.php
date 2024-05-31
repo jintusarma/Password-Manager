@@ -6,12 +6,14 @@
         $title = $_POST["title"];
         $pass = $_POST["pass"];
 
-        $method = "AES-256-CBC";
-        $key = "encryptionKey123";
-        $options = 0;
-        $iv = '1234567891011121';
+        // $method = "AES-256-CBC";
+        // $key = "encryptionKey123";
+        // $options = 0;
+        // $iv = '1234567891011121';
 
-        $encryptedData = openssl_encrypt($pass, $method, $key, $options,$iv);
+        $newKey = $key.$user;
+
+        $encryptedData = openssl_encrypt($pass, $method, $newKey, $options,$iv);
 
 
         // $decryptedData = openssl_decrypt($encryptedData, $method, $key, $options, $iv);

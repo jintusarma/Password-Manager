@@ -29,7 +29,8 @@ if ($_SESSION['login']) {
             <td>
                 <?php
 
-                    $decryptedData = openssl_decrypt($rows['password'], $method, $key, $options, $iv);
+                    $newKey = $key.$user;
+                    $decryptedData = openssl_decrypt($rows['password'], $method, $newKey, $options, $iv);
 
                     echo  $decryptedData;
                 ?>
