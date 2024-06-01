@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Document</title>
 </head>
 <body>
-<div class="container">
+    <div class="container">
         <h1>Login</h1>
     </div>
 

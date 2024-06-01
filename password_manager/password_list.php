@@ -12,10 +12,16 @@ if ($_SESSION['login']) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Password-List</title>
 </head>
 
 <body>
+
+    
+    <div class="header">
+        <?php include '../components/navbar.php'; ?>
+    </div>
+
     <table>
         <tr>
             <th>Title</th>
