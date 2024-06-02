@@ -3,8 +3,8 @@
     if($_SERVER["REQUEST_METHOD"]=="POST"){
         
         $user = $_SESSION['username'];
-        $title = $_POST["title"];
-        $pass = $_POST["pass"];
+        $title = $_POST["username"];
+        $pass = $_POST["password"];
 
         // $method = "AES-256-CBC";
         // $key = "encryptionKey123";
