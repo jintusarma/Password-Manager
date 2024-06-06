@@ -3,26 +3,22 @@
     if($_SERVER["REQUEST_METHOD"]=="POST"){
         
         $user = $_SESSION['username'];
-        $title = $_POST["username"];
+        $website = $_POST["website"];
+        $uname = $_POST["username"];
         $pass = $_POST["password"];
 
-        // $method = "AES-256-CBC";
-        // $key = "encryptionKey123";
-        // $options = 0;
-        // $iv = '1234567891011121';
+
 
         $newKey = $key.$user;
+
+        require '../sensitive_info/encryption.php';
 
         $encryptedData = openssl_encrypt($pass, $method, $newKey, $options,$iv);
 
 
-        // $decryptedData = openssl_decrypt($encryptedData, $method, $key, $options, $iv);
 
 
-        // echo $user.$title." ".$encryptedData;
-        // echo "\nDecrypt : ".$decryptedData;
-
-        $query= "INSERT into password_list(title,password,user) values ('$title','$encryptedData','$user')";
+        $query= "INSERT into password_list(website,uname,password,user) values ('$website','$uname','$encryptedData','$user')";
         $res = mysqli_query($conn,$query);
 
         if($res){

@@ -5,3 +5,5 @@ CREATE TABLE password_list (
     password VARCHAR(255) NOT NULL,
     FOREIGN KEY (user) REFERENCES users(username)
 );
+
+ALTER TABLE password_list CHANGE COLUMN title uname VARCHAR(255), ADD COLUMN website VARCHAR(255);

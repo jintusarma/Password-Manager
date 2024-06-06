@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    // session_start();
 
     $method = "AES-256-CBC";
     $key = "encryptionKey123";

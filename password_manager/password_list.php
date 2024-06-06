@@ -20,32 +20,46 @@ if ($_SESSION['login']) {
     
     <div class="header">
         <?php include '../components/navbar.php'; ?>
+
+        <div class="flex justify-center m-4 ">
+            <p class="border-double border-4 border-sky-500 px-8 py-4 bg-slate-100 font-mono text-xl font-medium tracking-wide">Password List</p>
+        </div>
     </div>
 
-    <table>
-        <tr>
-            <th>Title</th>
-            <th>Password</th>
-        </tr>
-        <?php
-            while ($rows=mysqli_fetch_assoc($res)) {
-        ?>
-        <tr>
-            <td><?php echo $rows['title'] ?></td>
-            <td>
-                <?php
 
-                    $newKey = $key.$user;
-                    $decryptedData = openssl_decrypt($rows['password'], $method, $newKey, $options, $iv);
+    <div class="flex justify-center">
+        <table class="border-separate border-2 border-slate-500 w-1/2">
+            <tr class="">
+                <th class="border border-slate-600">Site</th>
+                <th class="border border-slate-600">Username</th>
+                <th class="border border-slate-600">Password</th>
+            </tr>
+            <?php
+                while ($rows=mysqli_fetch_assoc($res)) {
+            ?>
+            <tr class="">
+                <td class="border border-slate-700 "> <p class="flex justify-center"><?php echo $rows['website'] ?> </p></td>
+                <td class="border border-slate-700"> <p class="flex justify-center"><?php echo $rows['uname'] ?> </p></td>
+                <td class="border border-slate-700 ">
+                    <p class="flex justify-center">
+                        <?php
 
-                    echo  $decryptedData;
-                ?>
-            </td>
-        </tr>
-        <?php } ?>
-    </table>
+                        include '../sensitive_info/encryption.php';
+                        $newKey = $key.$user;
+                        $decryptedData = openssl_decrypt($rows['password'], $method, $newKey, $options, $iv);
 
-    <button><a href="../">Back</a></button>
+                        echo  $decryptedData;
+                        ?>
+                    </p>
+                </td>
+            </tr>
+            <?php } ?>
+        </table>
+    </div>
+    
+    <div  class="flex justify-center">
+        <button class="border border-slate-800"><a href="../">Back</a></button>
+    </div>
 </body>
 
 </html>
