@@ -28,6 +28,9 @@ if ($_SESSION['login']) {
 
 
     <div class="flex justify-center">
+
+    
+
         <table class="border-separate border-2 border-slate-500 w-1/2">
             <tr class="">
                 <th class="border border-slate-600">Site</th>
@@ -57,8 +60,8 @@ if ($_SESSION['login']) {
         </table>
     </div>
     
-    <div  class="flex justify-center">
-        <button class="border border-slate-800"><a href="../">Back</a></button>
+    <div  class="flex justify-center mt-4">
+        <button class="border border-slate-800 px-8 py-2 bg-green-500"><a href="../">Back</a></button>
     </div>
 </body>
 

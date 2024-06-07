@@ -9,9 +9,9 @@
 
 
 
+        require '../sensitive_info/encryption.php';
         $newKey = $key.$user;
 
-        require '../sensitive_info/encryption.php';
 
         $encryptedData = openssl_encrypt($pass, $method, $newKey, $options,$iv);
 

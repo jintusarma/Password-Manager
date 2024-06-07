@@ -20,10 +20,7 @@
 </head>
 <body>
 <style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
+  
         #myForm {
             display: none;
         }
