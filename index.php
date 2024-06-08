@@ -36,9 +36,11 @@
             <p class="mt-2 text-lg leading-8 text-gray-600">Welcome to password manager</p>
           </div>
  
+    
+          <div class="flex flex-col justify-center items-center">
 
     <!-- <p>Add Password</p> -->
-    <button id="showFormButton"  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Add Password</button>
+    <button id="showFormButton"  class="mt-4 mb-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Add Password</button>
 
 
 
@@ -78,9 +80,10 @@
 
   
   
-  <button><a href="password_manager/password_list.php"  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Show All Password</a></button>
+  <button><a href="password_manager/password_list.php"  class="mt-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Show All Password</a></button>
   
-  <button class="block rounded-md bg-red-700 px-8 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><a href="authentication/logout.php">Logout</a></button>
+  <button class="mt-4 block rounded-md bg-red-700 px-8 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><a href="authentication/logout.php">Logout</a></button>
+</div>
 </div>
 
 
